@@ -81,7 +81,7 @@ HTMLActuator.prototype.addTile = function (tile) {
 
     // Render the tiles that merged
     tile.mergedFrom.forEach(function (merged) {
-      self.addTile(merged);
+     self.addTile(merged);
     });
   } else {
     classes.push("tile-new");
@@ -131,7 +131,7 @@ HTMLActuator.prototype.updateBestScore = function (bestScore) {
 
 HTMLActuator.prototype.message = function (won) {
   var type    = won ? "game-won" : "game-over";
-  var message = won ? "You win!" : "Game over!";
+  var message = won ? "Boooooong!" : "Smoke one more!";
 
   if (typeof ga !== "undefined") {
     ga("send", "event", "game", "end", type, this.score);
